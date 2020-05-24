@@ -1,0 +1,32 @@
+{
+	"name": "tspro",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"serve": "ts-node ./src/singleton/whfCrowller.ts",
+		"serve1": "ts-node ./src/composite/whfCrowller.ts",
+		"serve2": "ts-node ./src/crowller.ts",
+		"dev:build": "tsc -w",
+		"dev:start": "nodemon node ./build/crowller.js",
+		"dev": "concurrently npm:dev:*"
+	},
+	"nodemonConfig": {
+		"ignore": [
+			"build/*"
+		]
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^14.0.5",
+		"@types/superagent": "^4.1.7",
+		"cheerio": "^1.0.0-rc.3",
+		"concurrently": "^5.2.0",
+		"nodemon": "^2.0.4",
+		"superagent": "^5.2.2"
+	},
+	"dependencies": {
+		"@types/cheerio": "^0.22.18"
+	}
+}
